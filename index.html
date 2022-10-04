@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h1>koe</h1>
+        <h1>Length Conversion</h1>
+        km = <input type="text" id="km">
+        <br>
+        <button onclick="convert()">&#8595</button>
+        <br>
+        <div id="printbox"></div>
+        <script>
+            function convert() {
+                let miles =  document.getElementById("km").value;
+                console.log(miles);
+                let milcon = miles * 0.6214;
+                document.getElementById("printbox").innerText = milcon;
+
+            }
+        </script>
+
     </body>
 </html>
