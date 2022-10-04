@@ -9,10 +9,12 @@
         <div id="printbox"></div>
         <script>
             function convert() {
-                let miles =  document.getElementById("km").value;
-                console.log(miles);
-                let milcon = miles * 0.6214;
-                document.getElementById("printbox").innerText = milcon;
+                let km =  document.getElementById("km").value;
+                console.log(km);
+                let miles = km * 0.6214;
+                let test = miles.toFixed(1);
+                console.log(test);
+                document.getElementById("printbox").innerText = test;
 
             }
         </script>
