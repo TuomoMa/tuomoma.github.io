@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Pythagorean Theorem</h1>
+        <br>
+        <img src="kolmio.jpeg" alt="Kolmio">
+        <br>
+
+        a = <input type="text" id="a">
+        <br>
+        b = <input type="text" id="b">
+        <br>
+        <button onclick="pythagoraa()">&#8595</button>
+        <br>
+        <div id="printbox"></div>
+        <script>
+            function pythagoraa() {
+                let a =  document.getElementById("a").value;
+                console.log(a);
+                let b =  document.getElementById("b").value;
+                console.log(b);
+                let c =  Math.sqrt(((a*a)+(b*b)));
+                console.log(c);
+                document.getElementById("printbox").innerText = c;
+
+            }
+        </script>
+
+    </body>
+</html>
