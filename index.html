@@ -2,18 +2,18 @@
 <html>
     <body>
         <h1>Length Conversion</h1>
-        km = <input type="text" id="km">
-        <br>
-        <button onclick="convert()">&#8595</button>
-        <br>
+        km = <input id="kilometres" type="number" value="50">
+        <br><br>
+        <button onclick="convert()">&#8595</button> Convert to Miles
+        <br><br>
         <div id="printbox"></div>
         <script>
             function convert() {
-                let km =  document.getElementById("km").value;
+                let km =  Number(kilometres.value);
                 console.log(km);
                 let miles = km * 0.6214;
                 console.log(miles);
-                document.getElementById("printbox").innerText = miles.toFixed(1);
+                printbox.innerHTML = miles.toFixed(1) + " miles";
 
             }
         </script>
