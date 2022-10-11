@@ -16,11 +16,11 @@
         <script>
             const today = new Date();
             var startingYear = today.getFullYear();
-            var loppu = startingYear +100;
+            var endingYear = startingYear +100;
 
             function print1() {
                 let printHelpToDiv = "";
-                for(let i=startingYear; i<=loppu; i++) {
+                for(let i=startingYear; i<=endingYear; i++) {
                     printHelpToDiv = printHelpToDiv + startingYear + " " + (isLeapYear(startingYear))+ "<br/>";
                     document.getElementById("printbox").innerHTML = printHelpToDiv;
                     startingYear++;
