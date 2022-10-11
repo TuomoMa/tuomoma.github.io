@@ -6,6 +6,7 @@
         <meta http-equiv='cache-control' content='no-cache'> 
         <meta http-equiv='expires' content='0'> 
         <meta http-equiv='pragma' content='no-cache'>
+         <!--For the GitHub pages-->
     </head>
     <body onload="print1()">
         <h1>Leap Year</h1>
@@ -18,9 +19,8 @@
             var loppu = startingYear +100;
 
             function print1() {
-                var printHelpToDiv = "";
+                let printHelpToDiv = "";
                 for(let i=startingYear; i<=loppu; i++) {
-                
                     printHelpToDiv = printHelpToDiv + startingYear + " " + (isLeapYear(startingYear))+ "<br/>";
                     document.getElementById("printbox").innerHTML = printHelpToDiv;
                     startingYear++;
