@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <!--For the GitHub pages-->
         <meta http-equiv='cache-control' content='no-cache'> 
         <meta http-equiv='expires' content='0'> 
         <meta http-equiv='pragma' content='no-cache'>
@@ -18,24 +19,26 @@
 
             function print1() {
                 var printHelpToDiv = "";
-                do {
+                for(let i=startingYear; i<=loppu; i++) {
+                
                     printHelpToDiv = printHelpToDiv + startingYear + " " + (isLeapYear(startingYear))+ "<br/>";
-                   document.getElementById("printbox").innerHTML = printHelpToDiv;
-                   startingYear++;
-                    }while(startingYear<=loppu);
+                    document.getElementById("printbox").innerHTML = printHelpToDiv;
+                    startingYear++;
+                    };
                 }
-                function isLeapYear(startingYear) {
-                    let year = startingYear;
-                    if (year % 4 != 0) {
-                        return "is Not a Leap Year"
-                    } else if (year % 100 != 0) {
-                        return "is a Leap Year";
-                    } else if (year % 400 != 0) {
-                    return "is Not a Leap Year";
-                    } else {
+            function isLeapYear(startingYear) {
+                let year = startingYear;
+                if (year % 4 != 0) {
+                    return "is Not a Leap Year"
+                } else if (year % 100 != 0) {
                     return "is a Leap Year";
-                    }          
-                }
+                } else if (year % 400 != 0) {
+                    return "is Not a Leap Year";
+                } else {
+                    return "is a Leap Year";
+                }          
+            }               
+            
         </script>
     </body>
 </html>
